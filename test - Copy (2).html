@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+
+    <!-- Bootstrap CSS -->
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' 
+			integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh' 
+			crossorigin='anonymous'>
+
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
+			rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" 
+			crossorigin="anonymous">
+
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src='https://code.jquery.com/jquery-3.4.1.slim.min.js' 
+			integrity='sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n' 
+			crossorigin='anonymous'></script>
+    <script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js' 
+			integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo' 
+			crossorigin='anonymous'></script>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js' 
+			integrity='sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6' 
+			crossorigin='anonymous'></script>
+
+			
+	
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+	
+	<div class="container">
+	
+	<table id="tblData" class="table table-hover table-sm table-bordered">
+	<thead class="thead-dark">
+	  <tr>
+		<th>Id</th>
+		<th>Name</th>
+		<th>Age</th>
+		<th>Country</th>
+		<th>Action</th>
+	  </tr>
+	 </thead>
+	 <tbody>
+	  <tr data-id="1" data-name="Maria Anders">
+		<td>1</td>
+		<td>Maria Anders</td>
+		<td>30</td>
+		<td>Germany</td>
+		<td>
+			<button type="button" class="btn btn-info btn-sm btnSelect fa fa-pencil" data-toggle="modal" data-target="#myModal"></button>
+			<button type="button" class="btn btn-info btn-sm delbtn fa fa-trash" data-toggle="modal" data-target="#myModal"></button>
+		</td>
+	  </tr>
+	  <tr data-id="2" data-name="Francisco Chang">
+		<td>2</td>
+		<td>Francisco Chang</td>
+		<td>24</td>
+		<td>Mexico</td>
+		<td><button type="button" class="btn btn-info btn-sm modal-btn fa fa-pencil" data-toggle="modal" data-target="#myModal"></button></td>
+	  </tr>
+	  <tr data-id="3" data-name="Roland Mendel">
+		<td>3</td>
+		<td>Roland Mendel</td>
+		<td>100</td>
+		<td>Austria</td>
+		<td><button type="button" class="btn btn-info btn-sm modal-btn fa fa-pencil" data-toggle="modal" data-target="#myModal"></button></td>
+	  </tr>
+	  <tr data-id="4" data-name="Helen Bennett">
+		<td>4</td>
+		<td>Helen Bennett</td>
+		<td>28</td>
+		<td>UK</td>
+		<td><button type="button" class="btn btn-info btn-sm modal-btn fa fa-pencil" data-toggle="modal" data-target="#myModal"></button></td>
+	  </tr>
+	  <tr data-id="5" data-name="Yoshi Tannamuri">
+		<td>5</td>
+		<td>Yoshi Tannamuri</td>
+		<td>35</td>
+		<td>Canada</td>
+		<td><button type="button" class="btn btn-info btn-sm modal-btn fa fa-pencil" data-toggle="modal" data-target="#myModal"></button></td>
+	  </tr>
+	  <tr data-id="6" data-name="Giovanni Rovelli">
+		<td>6</td>
+		<td>Giovanni Rovelli</td>
+		<td>46</td>
+		<td>Italy</td>
+		<td><button type="button" class="btn btn-info btn-sm modal-btn fa fa-pencil" data-toggle="modal" data-target="#myModal"></button></td>
+	  </tr>
+	  <tr data-id="7" data-name="Alex Smith">
+		<td>7</td>
+		<td>Alex Smith</td>
+		<td>59</td>
+		<td>USA</td>
+		<td><button type="button" class="btn btn-info btn-sm modal-btn fa fa-pencil" data-toggle="modal" data-target="#myModal"></button></td>
+	  </tr>
+	</tbody>
+	</table>
+	
+	<br/>
+	<span id="spnText"></span>
+	
+	</div>
+
+	 <!-- The Modal -->
+	<div class="modal  fade" id="myModal" role="dialog">
+		<div class="modal-dialog modal-xl">
+			<div class="modal-content">
+
+			<!-- Modal Header -->
+			<div class="modal-header">
+			  <h4 class="modal-title">Modal Heading</h4>
+			  <button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+
+			<!-- Modal body -->
+			<div class="modal-body">
+				<p id="id"></p>
+				<p id="sname"></p>
+			</div>
+
+			<!-- Modal footer -->
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			</div>
+
+			</div>
+		</div>
+	</div>
+  		
+    <script>
+	
+		$(document).ready(function() {
+			$(".modal-btn").click(function (e){
+				$("tr").removeClass("alert-warning");
+				var clickedRow = $(e.target).closest("tr");	
+				clickedRow.addClass("alert-warning");
+				var data_id = clickedRow.data('id');
+				var data_name = clickedRow.data('name');
+				$("#myModal #id").text(data_id);
+				$("#myModal #sname").text(data_name);
+				$("#spnText").html('Clicked table cell value is: <b> ' + clickedRow.text() + '</b>');
+			})
+		});
+		
+		$(document).ready(function(){
+			// code to read selected table row cell data (values).
+			$(".btnSelect").on('click',function(){
+				 var currentRow=$(this).closest("tr");
+				 var col1=currentRow.find("td:eq(0)").html();
+				 var col2=currentRow.find("td:eq(1)").html();
+				 var col3=currentRow.find("td:eq(2)").html();
+				 var data=col1+"\n"+col2+"\n"+col3;
+				 alert(data);
+			});
+		});		
+
+    </script>
+
+</body>
+
+</html>
