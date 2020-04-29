@@ -169,7 +169,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link active">
+                                    <a href="#" class="nav-link ">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Active Page</p>
                                     </a>
@@ -201,7 +201,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link active">
+                                    <a href="#" class="nav-link ">
                                         <i class="fa fa-users nav-icon"></i>
                                         <p>Χρήστες</p>
                                     </a>
