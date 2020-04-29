@@ -201,11 +201,12 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link ">
+                                    <a href="{{ route('users.index') }}" class="nav-link ">
                                         <i class="fa fa-users nav-icon"></i>
                                         <p>Χρήστες</p>
                                     </a>
-                                </li>                               
+                                </li>                   
+<li><a class="nav-link" href="{{ route('users.index') }}">Manage Users</a></li>								
                             </ul>
 							<ul class="nav nav-treeview">
                                 <li class="nav-item">
